@@ -1,0 +1,56 @@
+* {
+    border: 0.5px solid black;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: gray;
+}
+
+.logo {
+    margin: 20px;
+    width: 15%;
+    padding: 5px;
+    padding-top: 15px;
+    background-color: white;
+}
+
+.menu {
+    padding: 5px;
+    padding-top: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    min-height: 200px;
+    padding: 15px;
+    min-width: 200px;
+}
+
+.left, .right {
+    flex-grow: 1;
+    text-overflow: wrap;
+}
+
+.right {
+    flex-grow: 0.3;
+    border: 3px solid black;
+}
+
+.main {
+    flex-grow: 2;
+    min-width: 400px;
+}
+
+footer {
+    background-color: gray;
+    padding: 5px;
+    padding-top: 15px;
+}

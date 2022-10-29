@@ -1,0 +1,48 @@
+* {
+    border-collapse: collapse;
+}
+
+.container {
+    display: grid;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.grid-item {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.flex-item {
+    flex-grow: 1;
+    border: 1px solid black;
+    min-height: 30px;
+}
+
+.main-flex {
+    display: flex;
+}
+
+.left-column {
+    flex-grow: 1;
+    min-height: 300px;
+}
+
+.content {
+    flex-grow: 3;
+}
+
+footer {
+    min-height: 50px;
+}
+
+.logo {
+    border: 3px solid black;
+    text-align: left;
+    flex: left;
+    width: 100px;
+    padding: 10px;
+    margin: 0px 0px 30px 20px;
+}

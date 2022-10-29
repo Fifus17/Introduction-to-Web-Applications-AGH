@@ -1,0 +1,66 @@
+.card {
+    float: left;
+    background-color: lightgray;
+    box-shadow: 5px black;
+}
+
+hr {
+    width: 80%;
+    margin-bottom: 0px;
+}
+
+button {
+    height: 30px;
+    width: 80px;
+    border: none;
+    background-color: pink;
+    text-align: nowrap;
+    margin: 15px;
+}
+
+h1 {
+    padding-left: 15px;
+    margin-bottom: 0px;
+}
+
+h4 {
+    padding-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: red;
+}
+
+p {
+    padding: 15px;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.info-container {
+    float: right;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        width: 25%;
+    }
+}
