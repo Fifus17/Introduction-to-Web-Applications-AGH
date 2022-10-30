@@ -32,6 +32,7 @@ h2, p {
     position: absolute;
     top: 25%;
     left: 10%;
+    animation: SlideLeft 1s ease-in;
 }
 
 .more-info {
@@ -51,11 +52,13 @@ h2, p {
     top: 25%;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    animation: SlideRight 1s ease-in;
 }
 
 .form-container h4 {
     margin: 10%;
     color: #aaa;
+    font-size: 1.5em;
 }
 
 .form-container .user-input {
@@ -86,4 +89,22 @@ h2, p {
     color: white;
     padding: 5px 15px;
     margin-left: 10%;
+}
+
+@keyframes SlideRight {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideLeft {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
