@@ -1,0 +1,89 @@
+* {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+header {
+    background-color: rgb(5, 122, 236);
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+header::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(5, 122, 236);
+	transform-origin: bottom right;
+	transform: skewY(-5deg);
+	z-index: -10;
+}
+
+h2, p {
+    color: white;
+}
+
+.text-container {
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+.more-info {
+    background-color: rgb(5, 122, 236);
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 15px;
+}
+
+.form-container {
+    background-color: white;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h4 {
+    margin: 10%;
+    color: #aaa;
+}
+
+.form-container .user-input {
+    position: relative;
+}
+
+.form-container .user-input input{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.form-container .user-input label {
+    position: absolute;
+    top:0;
+    left: 10%;
+    color: #aaa;
+}
+
+.submit {
+    background-color: rgb(5, 122, 236);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 10%;
+}
