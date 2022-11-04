@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div1 {
+    width: 250px;
+    height: 250px;
+    background-color: skyblue;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div2 {
+    width: 180px;
+    height: 180px;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0px;
+    font-size: 3rem;
+}
+
+#score-container {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: pink;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score {
+    font-size: 3.3rem;
+}
