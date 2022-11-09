@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <p>New password</p>
+        <div class="input-container">
+            <input type="password" id="input1">
+            <button class="btn" id="eye1"><img src="show.png" alt="eye"></button>
+        </div>
+        <p>Repeat new password</p>
+        <div class="input-container">
+            <input type="password" id="input2">
+            <button class="btn" id="eye2"><img src="show.png" alt="eye"></button>
+        </div>
+        <p>Password requirements</p>
+        <div class="requirements-container">
+            <div class="requirement">
+                <img src="remove.png" alt="" id="img1">
+                <p>at least 8 characters</p>
+            </div>
+        </div>
+        <div class="requirements-container">
+            <div class="requirement">
+                <img src="remove.png" alt="" id="img2">
+                <p>at least one special character</p>
+            </div>
+        </div>
+        <div class="requirements-container">
+            <div class="requirement">
+                <img src="remove.png" alt="" id="img3">
+                <p>at least one capital letter</p>
+            </div>
+        </div>
+        <div class="requirements-container">
+            <div class="requirement">
+                <img src="remove.png" alt="" id="img4">
+                <p>at least one digit</p>
+            </div>
+        </div>
+        <button id="submit">SUBMIT</button>
+    </div>
+</body>
+</html>
