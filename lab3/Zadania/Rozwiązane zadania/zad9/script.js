@@ -1,6 +1,7 @@
 // Getting html elements with DOC API
 let rightButton = document.getElementById("right-arrow");
 let leftButton = document.getElementById("left-arrow");
+let randomButton = document.getElementById("random");
 let card = document.getElementById("card-container");
 
 // arrays with data to show
@@ -51,6 +52,25 @@ var animationBackward =  () => {
     );
 }
 
+var random = () => {
+    // getting random index
+    var index = Math.floor(Math.random() * 3);
+    // fading out
+    card.style.opacity = '0';
+    // delay for the animation to finish
+    delay(1000).then(() => {
+        // changing data
+        card.children[0].src = photos[index];
+        card.children[1].innerText = names[index];
+        card.children[2].innerText = position[index];
+        // fading in
+        card.style.opacity = '1';
+    }
+    );
+}
+
+
 // adding event listeners to the buttons
 rightButton.addEventListener("click", animationForward);
 leftButton.addEventListener("click", animationBackward);
+randomButton.addEventListener("click", random);
