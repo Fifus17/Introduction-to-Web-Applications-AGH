@@ -55,14 +55,16 @@ var animationBackward =  () => {
 var random = () => {
     // getting random index
     var index = Math.floor(Math.random() * 3);
+    while(index == counter) index = Math.floor(Math.random() * 3);
+    counter = index;
     // fading out
     card.style.opacity = '0';
     // delay for the animation to finish
     delay(1000).then(() => {
         // changing data
-        card.children[0].src = photos[index];
-        card.children[1].innerText = names[index];
-        card.children[2].innerText = position[index];
+        card.children[0].src = photos[counter];
+        card.children[1].innerText = names[counter];
+        card.children[2].innerText = position[counter];
         // fading in
         card.style.opacity = '1';
     }
