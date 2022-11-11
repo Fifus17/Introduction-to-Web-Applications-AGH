@@ -13,14 +13,15 @@ var bodyClicked = (event) => {
 
 var fieldClicked = (event) => {
     event.stopPropagation();
-    var offsetX = event.offsetX;
-    var offsetY = event.offsetY;
-    if(offsetX < ballRadius) offsetX = ballRadius;
-    if(offsetY < ballRadius) offsetY = ballRadius;
-    if(offsetX > field.offsetWidth - ballRadius) offsetX = field.offsetWidth - ballRadius;
-    if(offsetY > field.offsetHeight - ballRadius) offsetY = field.offsetHeight - ballRadius;
-    ball.style.top = offsetY - ballRadius + 'px';
-    ball.style.left = offsetX - ballRadius + 'px';
+    var offsetX = event.clientX;
+    var offsetY = event.clientY;
+    // 8 is the margin of the field
+    if(offsetX < ballRadius) offsetX = ballRadius + 8;
+    if(offsetY < ballRadius) offsetY = ballRadius + 8;
+    if(offsetX > field.offsetWidth - ballRadius) offsetX = field.offsetWidth - ballRadius + 8;
+    if(offsetY > field.offsetHeight - ballRadius) offsetY = field.offsetHeight - ballRadius + 8;
+    ball.style.top = offsetY - 8 - ballRadius + 'px';
+    ball.style.left = offsetX - 8 - ballRadius + 'px';
 }
 
 body.addEventListener('click', bodyClicked);
