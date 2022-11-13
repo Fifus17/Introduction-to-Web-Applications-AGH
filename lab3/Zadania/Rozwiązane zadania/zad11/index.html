@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 11</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <button id="name">Name</button>
+        <button id="capital">Capital</button>
+        <button id="population">Population</button>
+        <button id="area">Area</button>
+    </nav>
+    <div id="subregions-container">
+        <ul id="subregions">
+            <!-- template -->
+            <!-- <li>
+                <button>
+                    <img src="left.png" alt="right arrow">
+                    <strong>Western Africa</strong>
+                    <p class="subregion-population">401908376</p>
+                    <p class="subregion-area">6141959</p>
+                </button>
+            </li> -->
+        </ul>
+    </div>
+    <div id="pages-buttons-container">
+    </div>
+    <div id="filter-container">
+        <input type="text" id="name-input" placeholder="Search for names">
+        <input type="text" id="capital-input" placeholder="Search for capitals">
+        <input type="text" id="population-min" placeholder="Minimum population">
+        <input type="text" id="population-max" placeholder="Maximum population">
+        <input type="text" id="area-min" placeholder="Minimum area">
+        <input type="text" id="area-max" placeholder="Maximum area">
+        <button id="start-filter">Filter</button>
+        <button id="clear-filters">Clear filters</button>
+    </div>
+</body>
+</html>
