@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoombie Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- <a href="https://www.flaticon.com/free-icons/crosshair" title="crosshair icons">Crosshair icons created by apien - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Vlad Szirka - Flaticon</a> -->
+</head>
+<body>
+    <div class="game">
+        <div class="ui">
+            <div id="score">1000</div>
+            <div id="lives">
+                <img src="filled-heart.png" alt="heart" id="heart1" class="heart">
+                <img src="filled-heart.png" alt="heart" id="heart2" class="heart">
+                <img src="filled-heart.png" alt="heart" id="heart3" class="heart">
+            </div>
+        </div>
+        <div class="board"></div>
+        <img src="crosshair.png" alt="" id="crosshair">
+        <div id="zombies-container">
+            <div class="zombie"></div>
+        </div>
+    </div>
+</body>
+</html>

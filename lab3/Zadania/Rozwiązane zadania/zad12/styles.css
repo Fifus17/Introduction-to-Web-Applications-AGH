@@ -1,0 +1,84 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    cursor: none;
+    position: relative;
+}
+
+.game {
+    z-index: -10;
+}
+
+.board {
+    position: relative;
+    height: 100vh;
+    min-height: 800px;
+    overflow: hidden;
+    background-image: url(board-bg.jpg);
+    z-index: -5;
+    /* cursor: url('crosshair.png'), auto; */
+}  
+
+#score {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5rem;
+}
+
+#lives {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.heart {
+    width: 70px;
+    height: 70px;
+}
+
+#crosshair {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    filter: invert(0.5);
+    pointer-events: none;
+}
+
+.zombie {
+    position: absolute;
+    bottom: 10px;
+    left: 110%;
+    width: 200px;
+    height: 310px;
+    background-image: url(walkingdead.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    animation: zombie 0.5s steps(8) infinite, walking 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes zombie {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -1600px 0px;
+    }
+}
+
+@keyframes walking {
+    0% {
+        left: 110%;
+    }
+    100% {
+        left: -300px;
+    }
+}

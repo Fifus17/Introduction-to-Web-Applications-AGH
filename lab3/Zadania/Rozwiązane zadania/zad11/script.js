@@ -235,58 +235,59 @@ const openList = (id) => {
 // function ran on clicking filter button
 const filterTable = () => {
     this.filteredData = [];
-    let filter1 = false;
-    let filter2 = false;
-    let filter3 = false;
-    let filter4 = false;
-    let filter5 = false;
-    let filter6 = false;
+    let inputs = [nameInput.value, capitalInput.value, populationMinInput.value, populationMaxInput.value, areaMinInput.value, areaMaxInput.value];
     let filteredData = [];
-    // filtering data
-    if(nameInput.value != "") filter1 = true;
-    if(capitalInput.value != "") filter2 = true;
-    if(populationMinInput.value != "") filter3 = true;
-    if(populationMaxInput.value != "") filter4 = true;
-    if(areaMinInput.value != "") filter5 = true;
-    if(areaMaxInput.value != "") filter6 = true;
-    if((isNaN(nameInput.value) || !filter1) && (isNaN(capitalInput.value) || !filter2) && (!isNaN(populationMinInput.value) || !filter3) && (!isNaN(populationMaxInput.value) || !filter4) && (!isNaN(areaMinInput.value) || !filter5) && (!isNaN(areaMaxInput.value)|| !filter6)) {
-        for(var i = 0; i < this.subregions.length; i++) {
-            let countries = [];
-            for(var j = 0; j < this.subregions[i].countries.length; j++) {
-                if(filter1) {
-                    if (!(this.subregions[i].countries[j].name.common.toLowerCase().includes(nameInput.value.toLowerCase()))) break;
-                }
-                if(filter2) {
-                    if(!this.subregions[i].countries[j].hasOwnProperty("capital")) break;
-                    if(!(this.subregions[i].countries[j].capital[0].toLowerCase().includes(capitalInput.value.toLowerCase()))) break;
-                }
-                if(filter3) {
-                    if (!(this.subregions[i].countries[j].population >= parseInt(populationMinInput.value))) break;
-                }
-                if(filter4) {
-                    if (!(this.subregions[i].countries[j].population <= parseInt(populationMaxInput.value))) break;
-                }
-                if(filter5) {
-                    if (!(this.subregions[i].countries[j].area >= parseInt(areaMinInput.value))) break;
-                }
-                if(filter6) {
-                    if (!(this.subregions[i].countries[j].area <= parseInt(areaMaxInput.value))) break;
-                }
-                countries.push(this.subregions[i].countries[j]);
+    let filters = [!(inputs[0] == ""), !(inputs[1] == ""), !(inputs[2] == ""), !(inputs[3] == ""), !(inputs[4] == ""), !(inputs[5] == "")];
+    // checking if the input is correct
+    if ((filters[0] && !isNaN(inputs[0])) || (filters[1] && !isNaN(inputs[1])) || (filters[2] && isNaN(inputs[2])) || (filters[3] && isNaN(inputs[3])) || (filters[4] && isNaN(inputs[4])) || (filters[5] && isNaN(inputs[5]))) {
+        alert("Wrong input");
+        return;
+    }
+    // filtering
+    for(var i = 0; i < this.subregions.length; i++) {
+        let countries = [];
+        for(var j = 0; j < this.subregions[i].countries.length; j++) {
+            let country = this.subregions[i].countries[j];
+            let countryName = country.name.common.toLowerCase();
+            if(country.hasOwnProperty("capital")) {var capitalName = country.capital[0].toLowerCase();}
+            let population = country.population;
+            let area = country.area;
+            let isFiltered = true;
+            if(filters[0]) {
+                isFiltered = isFiltered && countryName.includes(inputs[0].toLowerCase());
             }
-            if(countries.length > 0) {
-                filteredData.push({
-                    name: this.subregions[i].name, 
-                    countries: countries,
-                    population: this.subregions[i].population,
-                    area: this.subregions[i].area
-                });
+            if(country.hasOwnProperty("capital")){
+                if(filters[1]) {
+                    isFiltered = isFiltered && capitalName.includes(inputs[1].toLowerCase());
+                }
+            } else isFiltered = false;
+            if(filters[2]) {
+                isFiltered = isFiltered && population >= parseInt(inputs[2]);
             }
+            if(filters[3]) {
+                isFiltered = isFiltered && population <= parseInt(inputs[3]);
+            }
+            if(filters[4]) {
+                isFiltered = isFiltered && area >= parseInt(inputs[4]);
+            }
+            if(filters[5]) {
+                isFiltered = isFiltered && area <= parseInt(inputs[5]);
+            }
+            if(isFiltered) countries.push(this.subregions[i].countries[j]);
         }
-        console.log(filteredData);
-        this.currentData = filteredData;
-        loadPage();
-    } else alert("Wrong input!");
+        if(countries.length > 0) {
+            filteredData.push({
+                name: this.subregions[i].name, 
+                countries: countries,
+                population: this.subregions[i].population,
+                area: this.subregions[i].area
+            });
+        }
+    }
+    console.log(filteredData);
+    this.currentData = filteredData;
+    loadPage();
+    // } else alert("Wrong input!");
 }
 
 // function for clearing the filters

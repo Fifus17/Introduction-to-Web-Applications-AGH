@@ -164,6 +164,7 @@ strong {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    padding-bottom: 30px;
 }
 
 #filter-container input {
