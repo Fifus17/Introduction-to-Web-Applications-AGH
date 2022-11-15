@@ -4,12 +4,12 @@
 }
 
 body {
-    cursor: none;
+    /* cursor: none; */
     position: relative;
 }
 
 .game {
-    z-index: -10;
+    z-index: 10;
 }
 
 .board {
@@ -21,6 +21,97 @@ body {
     z-index: -5;
     /* cursor: url('crosshair.png'), auto; */
 }  
+
+#start-game {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 100px;
+    background-color: none;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    opacity: 0.8;
+    /* display: none; */
+    z-index: 20;
+}
+
+#start {
+    width: 200px;
+    height: 50px;
+    opacity: 0.4;
+    position: absolute;
+    bottom: -230%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#start-game button:hover {
+    opacity: 1;
+}
+
+#start-game input {
+    position: absolute;
+    height: 25px;
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#end-game {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+#end-game h1 {
+    font-size: 80px;
+    color: rgb(106, 17, 17);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#highscore {
+    position: absolute;
+    font-size: 30px;
+    font-family: Nosifer, Arial;
+    color: rgb(106, 17, 17);
+    left: 5%;
+    width: 800px;
+    overflow: visible;
+}
+
+#end-game button {
+    width: 200px;
+    height: 50px;
+    opacity: 0.4;
+    cursor: pointer;
+    position: absolute;
+    left: 35%;
+    bottom: -30%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+#end-game button:hover {
+    opacity: 1;
+}
+
+h1 {
+    font-family: Nosifer, Arial;
+}
 
 #score {
     position: absolute;
@@ -50,6 +141,8 @@ body {
     top: 0%;
     filter: invert(0.5);
     pointer-events: none;
+    z-index: 5;
+    opacity: 0;
 }
 
 .zombie {
@@ -61,9 +154,10 @@ body {
     background-image: url(walkingdead.png);
     background-repeat: repeat;
     background-position: 0px 0px;
-    animation: zombie 0.5s steps(8) infinite, walking 5s linear infinite;
-    z-index: -1;
+    animation: zombie 0.5s steps(8) infinite, walking 5s linear;
+    z-index: 1;
 }
+
 
 @keyframes zombie {
     0% {

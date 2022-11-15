@@ -9,14 +9,33 @@
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
     <!-- <a href="https://www.flaticon.com/free-icons/crosshair" title="crosshair icons">Crosshair icons created by apien - Flaticon</a> -->
     <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Vlad Szirka - Flaticon</a> -->
 </head>
 <body>
-    <div class="game">
+    <div id="start-game">
+        <h1>Zombie Game</h1>
+        <input type="Your nickname" id="nickname" placeholder="Your nickname">
+        <button id="start">Start</button>
+    </div>
+    <div id="end-game">
+        <h1>Game Over</h1>
+        <ol id="highscore">
+            <li id="score1">1500 | Filip | 21.03.2022 13:45</li>
+            <li id="score2">1400 | Zosia</li>
+            <li id="score3">1000 | ihbasdfbihad</li>
+            <li id="score4">400 | kjasdhbkasdh</li>
+            <li id="score5">5 | jndijasd</li>
+            <li id="score6">6 | hsahias</li>
+            <li id="score7">7 | hshisa</li>
+        </ul>
+        <button id="restart">Restart</button>
+    </div>
+    <div id="game">
         <div class="ui">
-            <div id="score">1000</div>
+            <div id="score">0</div>
             <div id="lives">
                 <img src="filled-heart.png" alt="heart" id="heart1" class="heart">
                 <img src="filled-heart.png" alt="heart" id="heart2" class="heart">
@@ -26,7 +45,7 @@
         <div class="board"></div>
         <img src="crosshair.png" alt="" id="crosshair">
         <div id="zombies-container">
-            <div class="zombie"></div>
+            <!-- <div class="zombie"></div> -->
         </div>
     </div>
 </body>
