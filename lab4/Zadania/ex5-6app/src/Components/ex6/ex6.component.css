@@ -1,0 +1,48 @@
+#view {
+    width: 80%;
+    min-height: 100px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#view h3 {
+    margin-top: 20px;
+}
+
+#container {
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards {
+    min-height: 200px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+}
+
+.cards h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cards button {
+    position: absolute;
+    width: 80%;
+    bottom: 10%;
+    left: 10%;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
