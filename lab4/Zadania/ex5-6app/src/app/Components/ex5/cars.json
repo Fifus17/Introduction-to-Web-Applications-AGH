@@ -1,0 +1,56 @@
+[
+    {
+        "brand": "Ford",
+        "model": "Mustang",
+        "color": "blue",
+        "inside": {
+            "color": "black",
+            "type": "leather"
+        }
+    },
+    {
+        "brand": "Ford",
+        "model": "Mustang",
+        "color": "black",
+        "inside": {
+            "color": "red",
+            "type": "leather"
+        }
+    },
+    {
+        "brand": "Peugeot",
+        "model": "3008",
+        "color": "white",
+        "inside": {
+            "color": "black-white",
+            "type": "leather"
+        }
+    },
+    {
+        "brand": "Peugeot",
+        "model": "3008",
+        "color": "black",
+        "inside": {
+            "color": "white",
+            "type": "leather"
+        }
+    },
+    {
+        "brand": "BMW",
+        "model": "X5",
+        "color": "black",
+        "inside": {
+            "color": "black",
+            "type": "leather"
+        }
+    },
+    {
+        "brand": "Audi",
+        "model": "A4",
+        "color": "gray",
+        "inside": {
+            "color": "black",
+            "type": "plastic"
+        }
+    }
+]
