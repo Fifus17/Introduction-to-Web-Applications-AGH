@@ -10,6 +10,7 @@ import { TripComponent } from './Components/trip/trip.component';
 import { NavigationBarComponent } from './Components/navigation-bar/navigation-bar.component';
 import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.component';
 import { ShoppingCartCardComponent } from './Components/shopping-cart-card/shopping-cart-card.component';
+import { AddModalComponent } from './Components/add-modal/add-modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShoppingCartCardComponent } from './Components/shopping-cart-card/shopp
     TripComponent,
     NavigationBarComponent,
     ShoppingCartComponent,
-    ShoppingCartCardComponent
+    ShoppingCartCardComponent,
+    AddModalComponent,
   ],
   imports: [
     BrowserModule,

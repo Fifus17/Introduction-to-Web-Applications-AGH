@@ -9,10 +9,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   title = 'MainProject';
 
-  constructor(private modalService: NgbModal) {
+  constructor() {
   }
 
-  public open(modal: any): void {
-    this.modalService.open(modal);
-  }
+  // public open(modal: any): void {
+  //   this.modalService.open(modal);
+  // }
 }
