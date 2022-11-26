@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent {
+  
+  itemsCounter: number = 0;
+
+    constructor() { }
+  
 
 }

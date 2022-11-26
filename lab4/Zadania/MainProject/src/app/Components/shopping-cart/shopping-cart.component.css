@@ -28,3 +28,11 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+.offcanvas-header {
+    box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
+}
+
+.offcanvas-footer {
+    box-shadow: 8px 0 5px rgba(182, 182, 182, 0.75);
+}

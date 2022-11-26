@@ -25,7 +25,7 @@ import { AddModalComponent } from './Components/add-modal/add-modal.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

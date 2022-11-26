@@ -1,32 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-trip',
   templateUrl: './trip.component.html',
   styleUrls: ['./trip.component.css']
 })
-export class TripComponent {
+export class TripComponent  {
 
-  title:string = "Bochnia";
-  country:string = "Poland";
-  dateOut:Date = new Date();
-  dateIn:Date = new Date();
-  places:number = 30;
-  maxPlaces:number = 30;
-  price:number = 1200;
-  currency:string = "$";
+  title:string;
+  country:string;
+  dateOut:string
+  dateIn:string;
+  places:number;
+  maxPlaces:number = 0;
+  price:number;
+  currency:string;
   counter:number = 0;
-  description:string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magnam dolorum soluta ratione voluptatem officiis vitae delectus quasi fugiat sit accusamus, eligendi ullam maiores, assumenda similique impedit? Cupiditate, sequi minus!";
-  imgPath:string = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+  description:string;
+  imgPath:string;
+  avgReview:number = 0;
   minusButton:any;
   plusButton:any;
   grad:number = 0;
-  flag = true;
+  flag:boolean = true;
+
+  @Input('data') data = {'title': "Bochnia", 'country': "Poland", 'dateOut': "09/17/2022", 'dateIn': "09/24/2022", 'places': 30, 'price': 900, 'currency': "$", 'description': "Bochnia is a town in southern Poland with a population of 33,000. It is the capital of Bochnia County, Subcarpathian Voivodeship, and is located in the historical region of Lesser Poland. The town is situated in the valley of the Vistula River, 40 km south of Kraków, and 20 km north of Tarnów. Bochnia is the seat of the Roman Catholic Diocese of Bochnia. The town is also the seat of the Bochnia County Museum, which is housed in the former palace of the Counts of Bochnia. The town is also the seat of the Bochnia County Museum, which is housed in the former palace of the Counts of Bochnia.", 'image': "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bochnia_-_Ratusz.jpg/1200px-Bochnia_-_Ratusz.jpg", 'avgReview': 3.7};
 
   constructor() {
     this.minusButton = document.getElementById("minus-button");
     this.plusButton = document.getElementById("plus-button");
+    this.title = this.data.title;
+    this.country = this.data.country;
+    this.dateOut = this.data.dateOut;
+    this.dateIn = this.data.dateIn;
+    this.places = this.data.places;
+    this.price = this.data.price;
+    this.currency = this.data.currency;
+    this.description = this.data.description;
+    this.imgPath = this.data.image;
+    this.avgReview = this.data.avgReview;
     this.maxPlaces = this.places;
+    console.log(this.data);
   }
 
   addPlace() {
@@ -49,8 +63,15 @@ export class TripComponent {
     }
   }
 
-  // grade(num:number) {
-  //   this.grad = num;
-  // }
+  grade(num:number) {
+    if (this.grad == num && !this.flag) {
+      this.grad = 0;
+      this.flag = true;
+    }
+    else {
+      this.grad = num;
+      this.flag = false;
+    }
+  }
 
 }

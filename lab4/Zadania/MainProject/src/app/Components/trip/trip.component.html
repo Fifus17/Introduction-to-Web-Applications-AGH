@@ -3,10 +3,10 @@
         <h3 class="card-title">{{title}}</h3>
     </div>
     <div class="card-body">
-        <img src="https://ocdn.eu/pulscms-transforms/1/kkak9kpTURBXy83ODM5YTBmMDJhZWUzYzhiNzVlZGNlMGRlMTNiNjgyMS5qcGeTlQMAHc0Dg80B-ZMFzQSwzQKkkwmmYjViNTc3Bt4AAaEwAQ/bochnia-rynek.jpg" class="card-img-top" alt="...">
+        <img [src]="imgPath" class="card-img-top" alt="...">
         <h5 class="country">{{country}}</h5>
-        <h6 class="date">9/12/2022 - 16/12/2022</h6>
-        <p class="description">{{description}}</p>
+        <h6 class="date">{{dateIn}} - {{dateOut}}</h6>
+        <p class="description" style="overflow: scroll; max-height: 174px;">{{description}}</p>
         <p class="places">Ilość miejsc: {{maxPlaces}}</p>
         <hr>
         <button type="button" class="btn btn-primary plus-button sign-button" id="plus-button" [disabled]="this.counter == this.maxPlaces" (click)="addPlace()">+</button>
@@ -26,7 +26,7 @@
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-half"></i>
             <i class="bi bi-star"></i>
-            3.7/5.0
+            {{avgReview}}/5.0
         </strong>
       </span>
     <span class="x-button position-absolute start-100 top-0 translate-middle badge rounded-pill bg-danger" style="padding: 0px; width: 41px; padding-bottom: 5px; display: none;">
@@ -35,12 +35,12 @@
 
     <span class="grading position-absolute translate-middle badge rounded-pill bg-warning" style="left: 20%; top: 100%;">
         <strong style="font-size: 2.5em;">
-            <i class="star bi" [ngClass]="{'bi-star': grad == 0, 'bi-star-fill': grad >= 1}" (mouseover)="flag ? grad=1 : false" (mouseout)="flag ? grad=0 : false" (click)="flag=false; grad=1"></i> 
-            <i class="star bi" [ngClass]="{'bi-star': grad <= 1, 'bi-star-fill': grad >= 2}" (mouseover)="flag ? grad=2 : false" (mouseout)="flag ? grad=0 : false" (click)="flag=false; grad=2"></i> 
-            <i class="star bi" [ngClass]="{'bi-star': grad <= 2, 'bi-star-fill': grad >= 3}" (mouseover)="flag ? grad=3 : false" (mouseout)="flag ? grad=0 : false" (click)="flag=false; grad=3"></i> 
-            <i class="star bi" [ngClass]="{'bi-star': grad <= 3, 'bi-star-fill': grad >= 4}" (mouseover)="flag ? grad=4 : false" (mouseout)="flag ? grad=0 : false" (click)="flag=false; grad=4"></i> 
+            <i class="star bi" [ngClass]="{'bi-star': grad == 0, 'bi-star-fill': grad >= 1}" (mouseover)="flag ? grad=1 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(1)"></i> 
+            <i class="star bi" [ngClass]="{'bi-star': grad <= 1, 'bi-star-fill': grad >= 2}" (mouseover)="flag ? grad=2 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(2)"></i> 
+            <i class="star bi" [ngClass]="{'bi-star': grad <= 2, 'bi-star-fill': grad >= 3}" (mouseover)="flag ? grad=3 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(3)"></i> 
+            <i class="star bi" [ngClass]="{'bi-star': grad <= 3, 'bi-star-fill': grad >= 4}" (mouseover)="flag ? grad=4 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(4)"></i> 
             <i class="star bi" [ngClass]="{'bi-star': grad <= 4, 'bi-star-fill': grad == 5}"
-            (mouseover)="flag ? grad=5 : false" (mouseout)="flag ? grad=0 : false" (click)="flag=false; grad=5"></i> 
+            (mouseover)="flag ? grad=5 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(5)"></i> 
         </strong>
       </span>
 </div>
