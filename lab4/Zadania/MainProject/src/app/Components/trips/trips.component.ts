@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as tripsData from '/Users/filipdziurdzia/Desktop/Studia/Trzeci-Semestr/WDAI/laboratoria/lab4/Zadania/MainProject/src/app/Data/tripsData.json';
+import * as tripsData from '../../Data/tripsData.json';
 
 @Component({
   selector: 'app-trips',
@@ -8,11 +8,13 @@ import * as tripsData from '/Users/filipdziurdzia/Desktop/Studia/Trzeci-Semestr/
 })
 export class TripsComponent {
 
-  data: any = [];
+  tripsData: any = [];
+  dataKeys = Object.keys(tripsData).slice(0, -2);
 
   constructor() { 
-    this.data = tripsData;
-    console.log(this.data);
+    this.tripsData = tripsData;
+    console.log(this.tripsData["0"]);
+    this.tripsData[this.dataKeys[0]];
   }
 
 }

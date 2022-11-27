@@ -1,4 +1,5 @@
-<!-- <div *ngFor="let tripData of data">
-    {{tripData.title}}
-</div> -->
-<app-trip></app-trip>
+<div class="row g-3">
+    <div class="col-md-3" *ngFor="let dataKey of dataKeys">
+        <app-trip [data]="tripsData[dataKeys]"></app-trip>
+    </div>
+</div>
