@@ -9,7 +9,6 @@ export class ShoppingCartCardComponent implements OnInit {
 
   @Input('data') data: any;
 
-  
   maxPlaces:number = 30;
   currentPrice:number = 0;
   counter:number = 5;
