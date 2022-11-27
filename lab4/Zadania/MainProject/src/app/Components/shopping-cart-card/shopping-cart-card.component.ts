@@ -1,22 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-cart-card',
   templateUrl: './shopping-cart-card.component.html',
   styleUrls: ['./shopping-cart-card.component.css']
 })
-export class ShoppingCartCardComponent {
+export class ShoppingCartCardComponent implements OnInit {
 
-  title:string = "Bochnia";
-  country:string = "Poland";
-  dateOut:Date = new Date();
-  dateIn:Date = new Date();
+  @Input('data') data: any;
+
+  
   maxPlaces:number = 30;
-  price:number = 1200;
-  currency:string = "$";
   currentPrice:number = 0;
   counter:number = 5;
-  imgPath:string = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
   minusButton:any;
   plusButton:any;
   grad:number = 0;
@@ -25,8 +21,12 @@ export class ShoppingCartCardComponent {
   constructor() {
     this.minusButton = document.getElementById("minus-button");
     this.plusButton = document.getElementById("plus-button");
+  }
+
+  ngOnInit() {
+    this.counter = this.data.counter;
     this.maxPlaces = this.counter;
-    this.currentPrice = this.counter * this.price;
+    this.currentPrice = this.data.counter * this.data.price;
   }
 
    addPlace() {
@@ -36,7 +36,7 @@ export class ShoppingCartCardComponent {
     else {
       this.minusButton.disabled = false;
     }
-    this.currentPrice = this.counter * this.price;
+    this.currentPrice = this.counter * this.data.price;
   }
 
   removePlace() {
@@ -46,6 +46,6 @@ export class ShoppingCartCardComponent {
     else {
       this.minusButton.disabled = true;
     }
-    this.currentPrice = this.counter * this.price;
+    this.currentPrice = this.counter * this.data.price;
   }
 }

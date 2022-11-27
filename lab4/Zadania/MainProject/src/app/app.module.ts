@@ -11,6 +11,7 @@ import { NavigationBarComponent } from './Components/navigation-bar/navigation-b
 import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.component';
 import { ShoppingCartCardComponent } from './Components/shopping-cart-card/shopping-cart-card.component';
 import { AddModalComponent } from './Components/add-modal/add-modal.component';
+import { RemoveTripComponent } from './Components/remove-trip/remove-trip.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AddModalComponent } from './Components/add-modal/add-modal.component';
     ShoppingCartComponent,
     ShoppingCartCardComponent,
     AddModalComponent,
+    RemoveTripComponent,
   ],
   imports: [
     BrowserModule,

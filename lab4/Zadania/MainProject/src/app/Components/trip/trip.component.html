@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">{{data.title}}</h3>
+        <h3 class="card-title">{{data.title | uppercase}}</h3>
     </div>
     <div class="card-body">
         <img [src]="data.image" class="card-img-top" alt="...">
-        <h5 class="country">{{data.country}}</h5>
+        <h5 class="country">{{data.country | uppercase}}</h5>
         <h6 class="date">{{data.dayIn}} - {{data.dayOut}}</h6>
         <p class="description" style="overflow: scroll; max-height: 174px;">{{data.description}}</p>
         <p class="places">Ilość miejsc: {{data.places}}</p>
@@ -26,7 +26,7 @@
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-half"></i>
             <i class="bi bi-star"></i>
-            {{data.avgReview}}/5.0
+            {{data.avgRating}}/5.0
         </strong>
       </span>
     <span class="x-button position-absolute start-100 top-0 translate-middle badge rounded-pill bg-danger" style="padding: 0px; width: 41px; padding-bottom: 5px; display: none;">
