@@ -7,7 +7,7 @@
         <h5 class="country">{{data.country | uppercase}}</h5>
         <h6 class="date">{{data.dayIn}} - {{data.dayOut}}</h6>
         <p class="description" style="overflow: scroll; max-height: 174px;">{{data.description}}</p>
-        <p class="places">Ilość miejsc: {{data.places}}</p>
+        <p class="places">Number of places: {{data.places}}</p>
         <hr>
         <button type="button" class="btn btn-primary plus-button sign-button" id="plus-button" [disabled]="this.counter == this.maxPlaces" (click)="addPlace()">+</button>
         <button type="button" class="btn btn-primary minus-button sign-button" id="minus-button" [disabled]="this.counter == 0" (click)="removePlace()">-</button>

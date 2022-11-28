@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-shopping-cart-card',
   templateUrl: './shopping-cart-card.component.html',
@@ -8,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ShoppingCartCardComponent implements OnInit {
 
   @Input('data') data: any;
+  @Input('currentData') currentData: any;
 
   maxPlaces:number = 30;
   currentPrice:number = 0;
@@ -23,9 +25,9 @@ export class ShoppingCartCardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.counter = this.data.counter;
-    this.maxPlaces = this.counter;
-    this.currentPrice = this.data.counter * this.data.price;
+    this.counter = this.currentData.counter;
+    this.maxPlaces = this.currentData.counter;
+    this.currentPrice = this.currentData.counter * this.data.price;
   }
 
    addPlace() {
