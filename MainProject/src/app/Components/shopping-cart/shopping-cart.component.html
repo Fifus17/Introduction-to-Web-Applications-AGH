@@ -1,12 +1,12 @@
 
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="position: relative; margin: 7px;">
+<button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-controls="cartCanvas" style="position: relative; margin: 12px;">
     <i class="bi bi-cart"></i>
     <span class="position-absolute translate-middle badge rounded-pill" [ngClass]="{'bg-danger': itemsCounter <= 10, 'bg-success': itemsCounter > 10}" style="left: 0%; top: 0%;">
        {{itemsCounter}}
     </span>
 </button>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="offcanvasExampleLabel">
 <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Your cart</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

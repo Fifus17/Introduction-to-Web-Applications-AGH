@@ -12,6 +12,12 @@ import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.
 import { ShoppingCartCardComponent } from './Components/shopping-cart-card/shopping-cart-card.component';
 import { AddModalComponent } from './Components/add-modal/add-modal.component';
 import { RemoveTripComponent } from './Components/remove-trip/remove-trip.component';
+import { MainScreenComponent } from './Components/main-screen/main-screen.component';
+import { NotificationsComponent } from './Components/notifications/notifications.component';
+import { MenuComponent } from './Components/menu/menu.component';
+import { LoginButtonComponent } from './Components/login-button/login-button.component';
+import { SignupButtonComponent } from './Components/signup-button/signup-button.component';
+import { NavigationBarLoginComponent } from './Components/navigation-bar-login/navigation-bar-login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +29,12 @@ import { RemoveTripComponent } from './Components/remove-trip/remove-trip.compon
     ShoppingCartCardComponent,
     AddModalComponent,
     RemoveTripComponent,
+    MainScreenComponent,
+    NotificationsComponent,
+    MenuComponent,
+    LoginButtonComponent,
+    SignupButtonComponent,
+    NavigationBarLoginComponent,
   ],
   imports: [
     BrowserModule,

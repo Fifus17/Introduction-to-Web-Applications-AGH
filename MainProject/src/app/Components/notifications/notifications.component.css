@@ -1,0 +1,4 @@
+.btn-grad {
+  background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+  border: none;
+}
