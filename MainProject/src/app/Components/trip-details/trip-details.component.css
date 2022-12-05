@@ -1,0 +1,23 @@
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel {
+    width: 60%;
+    left: 20%;
+}
+
+#title-country {
+    margin-left: 5%;
+}
+
+#date {
+    margin-left: 5%;
+    
+}
+
+#description {
+    margin-left: 5%;
+    margin-right: 5%;
+}

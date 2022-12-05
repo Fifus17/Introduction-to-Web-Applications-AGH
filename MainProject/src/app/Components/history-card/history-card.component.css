@@ -1,0 +1,30 @@
+.card {
+    width: 90%;
+    left: 5%;
+    position: relative;
+    height: 450px;
+    margin-top: 50px;
+}
+
+.card img {
+    height: 450px;
+    width: 450px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+}
+
+.badge {
+    position: absolute;
+}
+
+.date {
+    position: absolute;
+}
+
+.price {
+    position: absolute;
+}

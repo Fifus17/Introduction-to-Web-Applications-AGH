@@ -37,7 +37,22 @@
     box-shadow: 8px 0 5px rgba(182, 182, 182, 0.75);
 }
 
+         
 .btn-grad {
-background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
-border: 0px solid #F6416C;
-}
+    background-image: linear-gradient(to right, #00C9FF 0%, #92FE9D  51%, #00C9FF  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 

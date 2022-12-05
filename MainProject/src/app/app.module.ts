@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { LoginButtonComponent } from './Components/login-button/login-button.component';
 import { SignupButtonComponent } from './Components/signup-button/signup-button.component';
 import { NavigationBarLoginComponent } from './Components/navigation-bar-login/navigation-bar-login.component';
+import { HistoryComponent } from './Components/history/history.component';
+import { HistoryCardComponent } from './Components/history-card/history-card.component';
+import { TripDetailsComponent } from './Components/trip-details/trip-details.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +39,22 @@ import { NavigationBarLoginComponent } from './Components/navigation-bar-login/n
     LoginButtonComponent,
     SignupButtonComponent,
     NavigationBarLoginComponent,
+    HistoryComponent,
+    HistoryCardComponent,
+    TripDetailsComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
+
+
