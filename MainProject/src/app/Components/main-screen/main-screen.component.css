@@ -1,23 +1,29 @@
 
 body {
     width: 100%;
-    height: 100%;
+    height: 300%;
+    position: relative;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
 .background {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     animation: slideDown 2s ease-out;
     position: absolute;
     top: 0%;
     filter: blur(10px);
-    box-shadow: 0 3px 5px rgba(182, 182, 182, 0.75);
 }
 
 .logo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: show 4s ease;
@@ -26,13 +32,36 @@ body {
 .trip-carousel {
     height: 100vh;
     width: 100vw;
-    position: absolute;
-    top: 100%;
-    background-color: #fff;
 }
 
-agm-map {
-    height: 300px;
+.contact-and-map-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(315deg, #0093E9 0%, #80D0C7 56%);
+}
+
+.contact-and-map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact {
+    margin: 50px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact h3 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.contact p {
+    margin-bottom: 5px;
 }
 
 /* h1 {

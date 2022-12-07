@@ -1,14 +1,16 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Info
+
+<button type="button" class="btn btn-grad" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <i class="bi bi-info-lg"></i>
+    <!-- Details -->
   </button>
   
   <!-- Modal -->
   <div class="modal modal-xl fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="10000" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Safari</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Safari, Kenya</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
@@ -41,7 +43,19 @@
                 </button>
             </div>
             <!-- End of carousel -->
-            <h1 id="title-country">Safari, Kenya</h1>
+            <div class="name">
+              <h1 id="title-country">Safari, Kenya</h1>
+              <!-- <span class="badge rounded-pill bg-warning">
+                <strong>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                    3.7/5.0
+                </strong>
+            </span> -->
+            </div>
             <h5 id="date">07/09/2022 - 14/09/2022</h5>
             <p id="description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae voluptates temporibus corrupti dolorem perspiciatis, itaque voluptatibus ab magni laborum illo consequatur alias eos et nemo placeat, ea voluptatum cupiditate blanditiis!
@@ -51,11 +65,33 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum in repellendus quisquam ea quidem vero veniam provident nisi eos porro, sapiente dolores doloremque fuga eligendi libero, nesciunt commodi. Doloremque, sunt.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquid aliquam quod. Temporibus quis, a vitae quae sequi obcaecati. Voluptatum, perferendis aut! Delectus, esse excepturi. Neque exercitationem quod consequuntur placeat?
             </p>
+
+          <div class="comment-form">
+            <app-comment-form></app-comment-form>
+          </div>
+          <div class="comments-section"><h3 class="reviews-text">Reviews</h3></div>
+          <div class="current-stars">
+            <app-overall-review></app-overall-review>
+          </div>
+          <div class="comments-container">
+            <!-- ngFor po komponentach comment -->
+            <app-comment></app-comment>
+            <app-comment></app-comment>
+            <app-comment></app-comment>
+          </div>
             
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Add to cart</button>
+          <div class="adding">
+            <button type="button" class="btn btn-grad minus-button sign-button" id="minus-button">-</button>
+            <h6 class="counter">12 <!--{{counter}}--></h6>
+            <button type="button" class="btn btn-grad plus-button sign-button" id="plus-button">+</button>
+          </div>
+          <div class="checkout">
+            <h3 class="price">2700$</h3>
+            <button type="button" class="btn btn-grad">Add to cart</button>
+          </div>
         </div>
       </div>
     </div>

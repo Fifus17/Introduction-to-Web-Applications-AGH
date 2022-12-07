@@ -22,6 +22,10 @@ import { NavigationBarLoginComponent } from './Components/navigation-bar-login/n
 import { HistoryComponent } from './Components/history/history.component';
 import { HistoryCardComponent } from './Components/history-card/history-card.component';
 import { TripDetailsComponent } from './Components/trip-details/trip-details.component';
+import { Trip2Component } from './Components/trip2/trip2.component';
+import { CommentComponent } from './Components/comment/comment.component';
+import { CommentFormComponent } from './Components/comment-form/comment-form.component';
+import { OverallReviewComponent } from './Components/overall-review/overall-review.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { TripDetailsComponent } from './Components/trip-details/trip-details.com
     HistoryComponent,
     HistoryCardComponent,
     TripDetailsComponent,
+    Trip2Component,
+    CommentComponent,
+    CommentFormComponent,
+    OverallReviewComponent,
   ],
   imports: [
     BrowserModule,
