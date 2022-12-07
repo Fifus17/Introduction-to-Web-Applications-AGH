@@ -114,3 +114,11 @@
     margin-left: 5%;
     margin-top: 25px;
 }
+
+@media screen and (max-width: 1200px) {
+    .carousel {
+        width: 90%;
+        left: 5%;
+    }
+    
+}
