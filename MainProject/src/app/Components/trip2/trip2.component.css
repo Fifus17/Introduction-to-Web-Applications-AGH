@@ -22,7 +22,7 @@
     /* justify-content: space-between; */
     padding: 0px;
     margin-top: 5px;
-    margin-left: 12px;
+    margin-left: 22px;
 }
 
 .country {
@@ -34,7 +34,7 @@
 
 .date {
     font-size: 0.9em;
-    margin-left: 12px;
+    margin-left: 22px;
 }
 
 .price {

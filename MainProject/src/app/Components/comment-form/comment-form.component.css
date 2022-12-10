@@ -76,3 +76,7 @@ img {
     color: #fff;
     text-decoration: none;
 }
+
+#nick {
+    width: 80px;
+}
