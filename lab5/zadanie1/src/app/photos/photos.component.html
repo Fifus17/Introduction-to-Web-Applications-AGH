@@ -1,0 +1,12 @@
+<h1 id="photos">Photos</h1>
+<div *ngIf="photos!=undefined" >
+    <div *ngFor="let photo of photos">
+        <div *ngIf="photo.id<=10">
+            <div class="photo">
+                <h3>AlbumID: {{photo.albumId}}, ImageID:{{photo.id}}</h3>
+                <a routerLink="/photos/{{photo.id}}"><img src={{photo.thumbnailUrl}} alt=""></a>
+                <p>Click me!</p>
+            </div>
+        </div>
+    </div>
+</div>

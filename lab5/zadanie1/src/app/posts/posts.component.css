@@ -1,0 +1,41 @@
+#add {
+    text-align: center;
+}
+
+#posts {
+    text-align: center;
+}
+
+center{
+    text-align: center;
+}
+
+.singlepost{
+    margin:1em;
+    border:1px solid black;
+    border-radius: 25px;
+    background-color: #eee;
+}
+
+.singlepost h3, p {
+    margin:1em;
+    text-align: center;
+
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send{
+    width: 50px;
+    height: 25px;
+}

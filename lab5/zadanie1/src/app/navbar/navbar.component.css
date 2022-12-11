@@ -1,0 +1,17 @@
+body {
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    background-color:#eee;
+    justify-content: space-between;
+}
+
+.item{
+    font-size: 2em;
+    padding:0.4em;
+}
+
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
