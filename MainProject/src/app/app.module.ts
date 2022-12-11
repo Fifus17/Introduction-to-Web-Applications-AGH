@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 // import { AngularFireModule } from "@angular/fire";
 // import { environments } from '../environments';
 
@@ -59,7 +59,7 @@ import { PlaceholderTripCardComponent } from './placeholder-trip-card/placeholde
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    // RouterModule,
+    RouterModule,
     // AngularFireModule.initializeApp(environments.firebase),
   ],
   providers: [],
