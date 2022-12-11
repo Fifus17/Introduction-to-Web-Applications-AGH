@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+// import { AngularFireModule } from "@angular/fire";
+// import { environments } from '../environments';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +28,7 @@ import { Trip2Component } from './Components/trip2/trip2.component';
 import { CommentComponent } from './Components/comment/comment.component';
 import { CommentFormComponent } from './Components/comment-form/comment-form.component';
 import { OverallReviewComponent } from './Components/overall-review/overall-review.component';
+import { PlaceholderTripCardComponent } from './placeholder-trip-card/placeholder-trip-card.component';
 
 @NgModule({
   declarations: [
@@ -50,12 +53,14 @@ import { OverallReviewComponent } from './Components/overall-review/overall-revi
     CommentComponent,
     CommentFormComponent,
     OverallReviewComponent,
+    PlaceholderTripCardComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     RouterModule,
+    // AngularFireModule.initializeApp(environments.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

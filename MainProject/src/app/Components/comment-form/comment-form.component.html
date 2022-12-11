@@ -1,7 +1,10 @@
 <div class="card">
     <div class="photo-section">
         <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg" alt="person-photo">
-        <h5 class="nickname">Guest</h5>
+        <!-- <h5 class="nickname">Guest</h5> -->
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" id="nick">
+              </div>
         <div class="stars-container">
             <strong>
                 <i class="star bi" [ngClass]="{'bi-star': grad == 0, 'bi-star-fill': grad >= 1}" (mouseover)="flag ? grad=1 : false" (mouseout)="flag ? grad=0 : false" (click)="grade(1)"></i> 
