@@ -6,8 +6,8 @@ let list = document.getElementById('list');
 
 var nameToAdd = '';
 var phoneToAdd = '';
-var nameSchemeWithMinus = /^[A-Z]{1}[a-z]{1,}\s[A-Z]{1}[a-z]{1,}[-]{1}[A-Z]{1}[a-z]{1,}$/;
-var nameScheme = /^[A-Z]{1}[a-z]{1,}\s[A-Z]{1}[a-z]{1,}$/;
+var nameSchemeWithMinus = /^([A-Z]|Ą|Ę|Ł|Ż|Ź){1}([a-z]|ą|ę|ź|ż|ł){1,}\s([A-Z]|Ą|Ę|Ł|Ż|Ź){1}[a-z]{1,}[-]{1}([A-Z]|Ą|Ę|Ł|Ż|Ź){1}([a-z]|ą|ę|ź|ż|ł){1,}$/;
+var nameScheme = /^([A-Z]|Ą|Ę|Ł|Ż|Ź){1}([a-z]|ą|ę|ź|ż|ł){1,}\s[A-Z]{1}([a-z]|ą|ę|ź|ż|ł){1,}$/;
 var phone9digit = /^(?:\s*\d){9}$/;
 var phoneWithPlus = /^(?:\s*\+){1}(?:\s*\d){12}$/;
 
